@@ -48,6 +48,7 @@ sudo wget -P /etc/zabbix/scripts https://raw.githubusercontent.com/databloat/zab
 sudo chmod +x /etc/zabbix/scripts/zbx_veeam_get_metrics.sh
 sudo adduser zabbix veeam
 echo 'AllowKey=system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]' | sudo tee /etc/zabbix/zabbix_agent2.d/veeam-linux-free.conf
+sudo systemctl restart zabbix-agent2.service
 ```
 
 ### 1. Create script
