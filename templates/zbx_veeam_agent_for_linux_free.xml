@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>7.4</version>
+    <version>6.0</version>
     <template_groups>
         <template_group>
             <uuid>a571c0d144b14fd4a87a9d9b2aa9fcd6</uuid>
@@ -12,8 +12,8 @@
             <uuid>952b4645716b4727bdd0959b326ef0ad</uuid>
             <template>Veeam Agent for Linux Free</template>
             <name>Veeam Agent for Linux Free</name>
-            <description>Reuired local zbx_veeam_get_metrics.sh script!
-https://github.com/databloa
+            <description>Requires local zbx_veeam_get_metrics.sh script!
+https://github.com/databloat/zabbix-veeam-linux-free-agent-template
 Have fun :)</description>
             <vendor>
                 <name>databloat</name>
@@ -28,7 +28,7 @@ Have fun :)</description>
                 <item>
                     <uuid>95307a5c33b04b69bbd2c083f929eafe</uuid>
                     <name>Veeam valfree Get metrics</name>
-                    <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                    <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     <delay>10m</delay>
                     <value_type>TEXT</value_type>
                     <tags>
@@ -54,7 +54,7 @@ Have fun :)</description>
                         </step>
                     </preprocessing>
                     <master_item>
-                        <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                        <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     </master_item>
                     <tags>
                         <tag>
@@ -79,7 +79,7 @@ Have fun :)</description>
                         </step>
                     </preprocessing>
                     <master_item>
-                        <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                        <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     </master_item>
                     <tags>
                         <tag>
@@ -104,7 +104,7 @@ Have fun :)</description>
                         </step>
                     </preprocessing>
                     <master_item>
-                        <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                        <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     </master_item>
                     <tags>
                         <tag>
@@ -129,7 +129,7 @@ Have fun :)</description>
                         </step>
                     </preprocessing>
                     <master_item>
-                        <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                        <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     </master_item>
                     <tags>
                         <tag>
@@ -154,7 +154,7 @@ Have fun :)</description>
                         </step>
                     </preprocessing>
                     <master_item>
-                        <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                        <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     </master_item>
                     <tags>
                         <tag>
@@ -179,7 +179,7 @@ Have fun :)</description>
                         </step>
                     </preprocessing>
                     <master_item>
-                        <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                        <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     </master_item>
                     <tags>
                         <tag>
@@ -204,7 +204,7 @@ Have fun :)</description>
                         </step>
                     </preprocessing>
                     <master_item>
-                        <key>system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
+                        <key>system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]</key>
                     </master_item>
                     <tags>
                         <tag>

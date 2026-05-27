@@ -1,5 +1,5 @@
 zabbix_export:
-  version: '7.4'
+  version: '6.4'
   template_groups:
     - uuid: a571c0d144b14fd4a87a9d9b2aa9fcd6
       name: Templates/Applications
@@ -8,8 +8,8 @@ zabbix_export:
       template: 'Veeam Agent for Linux Free'
       name: 'Veeam Agent for Linux Free'
       description: |
-        Reuired local zbx_veeam_get_metrics.sh script!
-        https://github.com/databloa
+        Requires local zbx_veeam_get_metrics.sh script!
+        https://github.com/databloat/zabbix-veeam-linux-free-agent-template
         Have fun :)
       vendor:
         name: databloat
@@ -19,7 +19,7 @@ zabbix_export:
       items:
         - uuid: 95307a5c33b04b69bbd2c083f929eafe
           name: 'Veeam valfree Get metrics'
-          key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+          key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           delay: 10m
           value_type: TEXT
           tags:
@@ -36,7 +36,7 @@ zabbix_export:
               parameters:
                 - $.Processed
           master_item:
-            key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+            key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           tags:
             - tag: component
               value: backup-data
@@ -51,7 +51,7 @@ zabbix_export:
               parameters:
                 - $.Transferred
           master_item:
-            key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+            key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           tags:
             - tag: component
               value: backup-data
@@ -66,7 +66,7 @@ zabbix_export:
               parameters:
                 - $.End
           master_item:
-            key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+            key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           tags:
             - tag: component
               value: backup-job
@@ -81,7 +81,7 @@ zabbix_export:
               parameters:
                 - $.ID
           master_item:
-            key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+            key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           tags:
             - tag: component
               value: backup-job
@@ -96,7 +96,7 @@ zabbix_export:
               parameters:
                 - $.JobName
           master_item:
-            key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+            key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           tags:
             - tag: component
               value: backup-job
@@ -111,7 +111,7 @@ zabbix_export:
               parameters:
                 - $.Start
           master_item:
-            key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+            key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           tags:
             - tag: component
               value: backup-job
@@ -126,7 +126,7 @@ zabbix_export:
               parameters:
                 - $.Status
           master_item:
-            key: 'system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
+            key: 'system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]'
           tags:
             - tag: component
               value: backup-job

@@ -1,6 +1,6 @@
 {
     "zabbix_export": {
-        "version": "7.4",
+        "version": "6.0",
         "template_groups": [
             {
                 "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
@@ -12,7 +12,7 @@
                 "uuid": "952b4645716b4727bdd0959b326ef0ad",
                 "template": "Veeam Agent for Linux Free",
                 "name": "Veeam Agent for Linux Free",
-                "description": "Reuired local zbx_veeam_get_metrics.sh script!\nhttps://github.com/databloa\nHave fun :)",
+                "description": "Requires local zbx_veeam_get_metrics.sh script!\nhttps://github.com/databloat/zabbix-veeam-linux-free-agent-template\nHave fun :)",
                 "vendor": {
                     "name": "databloat",
                     "version": "7.4-6"
@@ -26,7 +26,7 @@
                     {
                         "uuid": "95307a5c33b04b69bbd2c083f929eafe",
                         "name": "Veeam valfree Get metrics",
-                        "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]",
+                        "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]",
                         "delay": "10m",
                         "value_type": "TEXT",
                         "tags": [
@@ -52,7 +52,7 @@
                             }
                         ],
                         "master_item": {
-                            "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
+                            "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
                         },
                         "tags": [
                             {
@@ -77,7 +77,7 @@
                             }
                         ],
                         "master_item": {
-                            "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
+                            "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
                         },
                         "tags": [
                             {
@@ -102,7 +102,7 @@
                             }
                         ],
                         "master_item": {
-                            "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
+                            "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
                         },
                         "tags": [
                             {
@@ -127,7 +127,7 @@
                             }
                         ],
                         "master_item": {
-                            "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
+                            "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
                         },
                         "tags": [
                             {
@@ -152,7 +152,7 @@
                             }
                         ],
                         "master_item": {
-                            "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
+                            "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
                         },
                         "tags": [
                             {
@@ -177,7 +177,7 @@
                             }
                         ],
                         "master_item": {
-                            "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
+                            "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
                         },
                         "tags": [
                             {
@@ -202,7 +202,7 @@
                             }
                         ],
                         "master_item": {
-                            "key": "system.run[sudo /etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
+                            "key": "system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]"
                         },
                         "tags": [
                             {

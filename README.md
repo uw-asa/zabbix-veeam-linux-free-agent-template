@@ -34,7 +34,7 @@ Feedback, suggestions, and issue reports are always welcome — feel free to ope
 ## 🧩 Compatibility & Requirements
 
 - Debian-based environment with Veeam Agent for Linux Free Edition
-- Tested with Zabbix 7.4
+- Tested with Zabbix 6.4
 - system.run allowed for server on agent
 ---
 
@@ -51,15 +51,24 @@ Copy script content from GitHub and save
 sudo chmod +x /etc/zabbix/scripts/zbx_veeam_get_metrics.sh
 ```
 
-### 3. Configure sudo permissions for Zabbix:
+### 3. Configure permissions for Zabbix
+
+Add zabbix to the veeam users group, so sudo access is not required
+
 ```bash
-sudo visudo
+sudo groupmod -a -U zabbix veeam
 ```
 
-Add at the end:
+Tell Zabbix it's ok to run our script by copying this text:
+
+```INI
+AllowKey=system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]
+```
+
+To a new Zabbix config file:
 
 ```bash
-zabbix ALL=(ALL) NOPASSWD: /etc/zabbix/scripts/zbx_veeam_get_metrics.sh
+sudo nano /etc/zabbix/zabbix_agent2.d/veeam-linux-free.conf
 ```
 
 ### 4. Import Zabbix Template (Server)
@@ -70,9 +79,8 @@ Import the provided Zabbix template XML file into your Zabbix frontend. Assign t
 
 
 ## ⚠️ Important Notes
-- Ensure the zabbix user has passwordless sudo access only to necessary commands.
+
 - This template monitors Veeam Agent for Linux Free Edition (standalone).
-- The script requires appropriate sudo permissions for the Zabbix user.
 
 ---
 Created with ❤️ by **databloat**  
