@@ -40,6 +40,16 @@ Feedback, suggestions, and issue reports are always welcome — feel free to ope
 
 ## ⚙️ Setup Script
 
+### Quick install (skip steps 1-3)
+
+```bash
+sudo mkdir /etc/zabbix/scripts
+sudo wget -P /etc/zabbix/scripts https://raw.githubusercontent.com/databloat/zabbix-veeam-linux-free-agent-template/refs/heads/main/zbx_veeam_get_metrics.sh
+sudo chmod +x /etc/zabbix/scripts/zbx_veeam_get_metrics.sh
+sudo adduser zabbix veeam
+echo 'AllowKey=system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]' | sudo tee /etc/zabbix/zabbix_agent2.d/veeam-linux-free.conf
+```
+
 ### 1. Create script
 ```bash
 sudo nano /etc/zabbix/scripts/zbx_veeam_get_metrics.sh
@@ -56,7 +66,7 @@ sudo chmod +x /etc/zabbix/scripts/zbx_veeam_get_metrics.sh
 Add zabbix to the veeam users group, so sudo access is not required
 
 ```bash
-sudo groupmod -a -U zabbix veeam
+sudo adduser zabbix veeam
 ```
 
 Tell Zabbix it's ok to run our script by copying this text:
