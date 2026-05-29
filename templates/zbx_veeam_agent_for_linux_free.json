@@ -138,7 +138,7 @@
                     },
                     {
                         "uuid": "b1e77b783472485d9cb983c493e8575d",
-                        "name": "Backup JobName",
+                        "name": "Backup Job Name",
                         "type": "DEPENDENT",
                         "key": "veeam.valfree.job.name",
                         "history": "90d",

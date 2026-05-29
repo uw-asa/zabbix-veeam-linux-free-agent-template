@@ -19,7 +19,7 @@ Feedback, suggestions, and issue reports are always welcome — feel free to ope
 | Backup Data Processed | `veeam.valfree.data.processed` | Dependent item | Amount of backup data processed |
 | Backup Data Transferred | `veeam.valfree.data.transferred` | Dependent item | Amount of backup data transferred |
 | Backup Job End | `veeam.valfree.job.end` | Dependent item | Backup job end timestamp |
-| Backup JobName | `veeam.valfree.job.name` | Dependent item | Name of the backup job |
+| Backup Job Name | `veeam.valfree.job.name` | Dependent item | Name of the backup job |
 | Backup Job Start | `veeam.valfree.job.start` | Dependent item | Backup job start timestamp |
 | Backup Job Status | `veeam.valfree.job.status` | Dependent item | Status of the backup job (Success, Failed, etc.) |
 | Backup Session ID | `veeam.valfree.job.id` | Dependent item | Session ID of the backup job |
