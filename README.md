@@ -44,7 +44,7 @@ Feedback, suggestions, and issue reports are always welcome — feel free to ope
 
 ```bash
 sudo mkdir /etc/zabbix/scripts
-sudo wget -P /etc/zabbix/scripts https://raw.githubusercontent.com/databloat/zabbix-veeam-linux-free-agent-template/refs/heads/main/zbx_veeam_get_metrics.sh
+sudo wget -P /etc/zabbix/scripts https://raw.githubusercontent.com/uw-asa/zabbix-veeam-linux-free-agent-template/refs/heads/zabbix6/zbx_veeam_get_metrics.sh
 sudo chmod +x /etc/zabbix/scripts/zbx_veeam_get_metrics.sh
 sudo adduser zabbix veeam
 echo 'AllowKey=system.run[/etc/zabbix/scripts/zbx_veeam_get_metrics.sh]' | sudo tee /etc/zabbix/zabbix_agent2.d/veeam-linux-free.conf
